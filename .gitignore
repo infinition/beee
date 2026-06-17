@@ -1,0 +1,33 @@
+# --- Secrets & local config (never commit) ---
+beee_config.json
+esp32_firmware/src/secrets.h
+tools/beee_agent_config.json
+
+# --- PyInstaller output ---
+tools/build/
+tools/dist/
+tools/*.spec
+
+# --- PlatformIO ---
+.pio/
+esp32_firmware/.pio/
+*.bin
+*.elf
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# --- Server runtime state ---
+python_server/persona_state.json
+python_server/static/uploads/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

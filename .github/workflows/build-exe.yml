@@ -1,0 +1,35 @@
+name: build-exe
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  windows-exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build deps
+        run: pip install pyinstaller psutil
+
+      - name: Build beee_agent.exe
+        run: pyinstaller --onefile --noconsole --name beee_agent tools/beee_agent.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: beee_agent-windows
+          path: dist/beee_agent.exe
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/beee_agent.exe

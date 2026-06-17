@@ -1,0 +1,8 @@
+{
+  "beee_url": "http://beee.local",
+  "watch_root": "C:/DEV",
+  "poll_seconds": 3,
+  "watch_active_window": false,
+  "watch_cpu": false,
+  "cpu_threshold": 92
+}

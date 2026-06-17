@@ -1,0 +1,14 @@
+#!/bin/sh
+# Optional Beee git hook: show a "pushing" state on the device when you push.
+# Install: copy this file to .git/hooks/pre-push in your repo and make it executable
+#   cp tools/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+#
+# Note: this only signals the START of the push (git has no native post-push hook).
+# For reliable success/failure feedback, wrap the command instead:
+#   python /path/to/tools/beee_run.py git push
+
+BEEE_URL="${BEEE_URL:-http://beee.local}"
+curl -s -m 3 -X POST "$BEEE_URL/api/progress" \
+  -H "Content-Type: application/json" \
+  -d '{"percent":-1,"text":"Pushing..."}' >/dev/null 2>&1
+exit 0

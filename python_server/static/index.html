@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beee - Cockpit Emotionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <span class="pulse-dot" id="status-dot"></span>
+                <h1>Beee-CORE <span class="accent-text">// CONSOLE VISUELLE</span></h1>
+            </div>
+            <div class="system-status">
+                <span class="status-label">DEVICE STATUS:</span>
+                <span class="status-value" id="status-text">DECONNECTE</span>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <div class="dashboard-grid">
+            
+            <!-- Left Panel: Live Face Monitor -->
+            <div class="panel glass-card face-panel">
+                <div class="panel-header">
+                    <h2>MIRROIR D'EMOTION</h2>
+                    <span class="tag">LIVE</span>
+                </div>
+                
+                <div class="face-container">
+                    <div id="virtual-face" class="face exp-idle">
+                        <div class="eye left-eye">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eye right-eye">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+
+                <div class="speech-bubble">
+                    <div class="speech-prefix">&gt;&gt; Beee_TALK:</div>
+                    <div class="speech-text" id="speech-content">En attente de connexion...</div>
+                </div>
+            </div>
+
+            <!-- Middle Panel: Personality Metrics -->
+            <div class="panel glass-card metrics-panel">
+                <div class="panel-header">
+                    <h2>METRIQUES COMPORTEMENTALES</h2>
+                    <span class="tag">NEURAL</span>
+                </div>
+                
+                <div class="metrics-container">
+                    <!-- Metric Card 1: Energy -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <span class="metric-name">ENERGIE</span>
+                            <span class="metric-value" id="val-energy">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill fill-cyan" id="bar-energy" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Metric Card 2: Affection -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <span class="metric-name">AFFECTION</span>
+                            <span class="metric-value" id="val-affection">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill fill-magenta" id="bar-affection" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Metric Card 3: Trust -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <span class="metric-name">CONFIANCE</span>
+                            <span class="metric-value" id="val-trust">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill fill-cyan" id="bar-trust" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Metric Card 4: Boredom -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <span class="metric-name">ENNUI</span>
+                            <span class="metric-value" id="val-boredom">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill fill-yellow" id="bar-boredom" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Metric Card 5: Chaos -->
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <span class="metric-name">NIVEAU DE CHAOS</span>
+                            <span class="metric-value" id="val-chaos">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill fill-red" id="bar-chaos" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mood-badge-container">
+                    <span class="mood-title">ETAT ACTUEL :</span>
+                    <span class="mood-badge" id="mood-val">IDLE</span>
+                </div>
+            </div>
+
+            <!-- Right Panel: Control Board & Streamer -->
+            <div class="panel glass-card control-panel">
+                <div class="panel-header">
+                    <h2>MODULE DE COMMANDE</h2>
+                </div>
+
+                <!-- Chat Command -->
+                <div class="control-section">
+                    <h3>PARLER A Beee</h3>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Dis quelque chose à l'IA..." />
+                        <select id="chat-emotion">
+                            <option value="idle">Neutre</option>
+                            <option value="happy">Joyeux</option>
+                            <option value="sad">Triste</option>
+                            <option value="angry">Fâché</option>
+                            <option value="sarcastic">Sarcastique</option>
+                            <option value="thinking">Pensif</option>
+                        </select>
+                        <button id="btn-send-chat" class="btn btn-primary">ENVOYER</button>
+                    </div>
+                </div>
+
+                <!-- Triggers -->
+                <div class="control-section">
+                    <h3>DECLENCHEURS MAQUETTES</h3>
+                    <div class="btn-grid">
+                        <button class="btn btn-outline" onclick="triggerEvent('build_success')">Build Réussi</button>
+                        <button class="btn btn-outline" onclick="triggerEvent('build_failed')">Build Échoué</button>
+                        <button class="btn btn-outline" onclick="triggerEvent('touch')">Chatouiller</button>
+                        <button class="btn btn-outline" onclick="triggerEvent('ignored')">Ignorer</button>
+                    </div>
+                </div>
+
+                <!-- Media Streamer -->
+                <div class="control-section">
+                    <h3>STREAMER MEME / GIF (172x320)</h3>
+                    <div class="file-upload-area" id="drop-zone">
+                        <p>Glisser-déposer un GIF ou une Image ici, ou cliquez pour choisir</p>
+                        <input type="file" id="file-input" accept="image/gif, image/png, image/jpeg" style="display: none;" />
+                        <div id="upload-status" class="upload-status"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

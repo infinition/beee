@@ -1,0 +1,27 @@
+name: firmware
+
+on:
+  push:
+    paths:
+      - "esp32_firmware/**"
+      - ".github/workflows/firmware.yml"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PlatformIO
+        run: pip install platformio
+
+      - name: Compile firmware
+        # secrets.h is git-ignored; config.h falls back to placeholder WiFi values,
+        # so this only checks that the firmware compiles.
+        run: pio run -d esp32_firmware

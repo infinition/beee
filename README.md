@@ -8,6 +8,7 @@
 
 Beee is a tiny animated face that sits on your desk and gives your AI agents a body.
 
+
 It runs on a cheap ESP32-S3 touch screen. Agents talk to it over a small HTTP API
 (or through MCP), so they can show how they feel, say a line, react to what happens
 on your machine, and the part I actually built it for: pop a question on the screen

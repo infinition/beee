@@ -15,6 +15,13 @@ and wait for you to physically tap Yes or No before doing something you might re
 
 It started as a "wouldn't it be fun if" weekend idea and ended up living on my desk.
 
+
+<img width="480" height="525" alt="7dba8c4d-e72f-47f5-89ba-1810779feba8" src="https://github.com/user-attachments/assets/b317ef5c-4ae5-453e-b2b0-2e5d3a6949b8" />
+<img width="480" height="584" alt="5196107c-6d78-48e3-b291-cfa1d77fbdcf" src="https://github.com/user-attachments/assets/54d7b63e-406c-41de-836c-4e56aafb5a39" />
+<img width="480" height="494" alt="e4237728-619a-43dc-8e1b-aaef3c9d2dae" src="https://github.com/user-attachments/assets/3c7f254c-2b2b-4e8a-a033-ebb231f0d73a" />
+<img width="480" height="500" alt="dcab5806-dd08-4a8f-87ca-259e8af0d0a9" src="https://github.com/user-attachments/assets/039bbc40-1cfb-4147-badd-33b8d18ff78f" />
+
+
 ## What it does
 
 - A little face with moods. It blinks, glances around on its own, winks, breathes,

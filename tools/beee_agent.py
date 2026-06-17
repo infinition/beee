@@ -177,10 +177,10 @@ def main():
             name = os.path.basename(repo)
             if pushed:
                 log(f"PUSH detected in {name}")
-                emotion(url, "hacker", f"Push {name} ! A moi la liberte !")
+                emotion(url, "happy", f"Push {name} ! A moi la liberte !")
             elif committed:
                 log(f"COMMIT detected in {name}")
-                emotion(url, "happy", f"Commit sur {name}.")
+                emotion(url, "thinking", f"Commit sur {name}.")
 
         if cfg.get("watch_active_window"):
             cat = _categorize(_active_window_title())

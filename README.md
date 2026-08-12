@@ -1,3 +1,5 @@
+<img width="401" height="401" alt="image-removebg-preview (1)" src="https://github.com/user-attachments/assets/0ea4d419-dca4-4fd7-8a01-37f616daca15" />
+
 # Beee
 
 [![firmware](https://github.com/infinition/beee/actions/workflows/firmware.yml/badge.svg)](https://github.com/infinition/beee/actions/workflows/firmware.yml)

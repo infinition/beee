@@ -1,4 +1,4 @@
-<img width="401" height="401" alt="image-removebg-preview (1)" src="https://github.com/user-attachments/assets/0ea4d419-dca4-4fd7-8a01-37f616daca15" />
+<img width="302" height="302" alt="635180085-0ea4d419-dca4-4fd7-8a01-37f616daca15-removebg-preview" src="https://github.com/user-attachments/assets/2099f8e0-9821-41c8-8abe-1eb0158a2b4c" />
 
 # Beee
 

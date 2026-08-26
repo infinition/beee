@@ -1,4 +1,6 @@
-<img width="302" height="302" alt="635180085-0ea4d419-dca4-4fd7-8a01-37f616daca15-removebg-preview" src="https://github.com/user-attachments/assets/2099f8e0-9821-41c8-8abe-1eb0158a2b4c" />
+<p align="center">
+  <img src=".github/beee.png" alt="beee icon" width="302" height="302" />
+</p>
 
 # Beee
 
